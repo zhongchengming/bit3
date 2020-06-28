@@ -22,7 +22,7 @@ public class IndexController {
             model.addAttribute("message", "登录成功");
             return "viewManage/viewHome";
         }else {
-            model.addAttribute("message", "登录失败");
+//            model.addAttribute("message", "登录失败");
             return "index";
         }
     }
