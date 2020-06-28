@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="appVersionManageArt:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2cfc4042-3af1-4b84-8a1f-527a8c57edbb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/appVersionManageArt_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/appVersionManageArt_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/serviceImpl/testServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appVersionManageArt.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/appVersionManageArt_Web_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appVersionManageArt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/appVersionManageArt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/classes/com/asa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/classes/database.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/classes/mapping/test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/classes/mappingConf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/classes/springmvc-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/springmvc-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/appVersionManageArt_Web_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/controller/DemoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/controller/HomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/controller/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/controller/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/mapping/AccountMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/mapping/FjAccessTokenMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/mapping/HomeMapping.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/mapping/MessageMapping.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/mapping/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/DemoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/HomeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/MessageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/PersonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/serviceImpl/DemoServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/serviceImpl/HomeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/serviceImpl/MessageServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ylzInfo/service/serviceImpl/PersonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/AccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/HomeMapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/MessageMapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappingConf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappingConf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/weblogic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/mapping/AccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/mapping/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/advice/GrLoginInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/bean/FjAccessToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/bean/FjAccessToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/bean/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/bean/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/controller/MessageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/mapping/FjAccessTokenMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/mapping/HomeMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/mapping/MessageMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/service/DemoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/service/HomeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/service/MessageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/service/serviceImpl/MessageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/util/HttpRequst.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/util/HttpRequst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/util/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/util/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/util/YlzEncryptUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/com/ylzInfo/util/YlzEncryptUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/mapping/HomeMapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/mapping/MessageMapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/mappingConf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/classes/mappingConf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/lib/ojdbc7-12.1.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/lib/platform-ws-client-1.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/lib/spring-oxm-4.3.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/lib/spring-webmvc-4.3.1.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/lib/ylz-dto-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/springmvc-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/springmvc-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/appVersionManageAt/WEB-INF/weblogic.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/advice/GrLoginInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/bean/FjAccessToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ylzInfo/bean/FjAccessToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/bean/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ylzInfo/bean/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ylzInfo/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/controller/MessageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/mapping/FjAccessTokenMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/mapping/HomeMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/mapping/MessageMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/service/DemoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/service/HomeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/service/MessageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/service/serviceImpl/MessageServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/util/HttpRequst.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ylzInfo/util/HttpRequst.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/util/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ylzInfo/util/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ylzInfo/util/YlzEncryptUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ylzInfo/util/YlzEncryptUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/HomeMapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/MessageMapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappingConf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappingConf.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/mavennx/Repository" />
+        <option name="mavenHome" value="$USER_HOME$/Library/maven/apache-maven-3.5.0" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dw0guQTUDWGjV3HhOsH0wWgtQs" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2862069" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 7.0.77" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.77" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="appVersionManageArt:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/appVersionManageArt" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_appVersionManageArt" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50277" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="50278" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Executor">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="appVersionManageArt:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cfc4042-3af1-4b84-8a1f-527a8c57edbb" name="Default Changelist" comment="" />
+      <created>1593320962871</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593320962871</updated>
+      <workItem from="1593320967388" duration="1598000" />
+      <workItem from="1593323215632" duration="34000" />
+      <workItem from="1593343900972" duration="1427000" />
+      <workItem from="1593345762007" duration="720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="84" key="#Project_Structure" timestamp="1593321069000">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state x="320" y="84" key="#Project_Structure/0.23.1440.788@0.23.1440.788" timestamp="1593321069000" />
+    <state x="184" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593344627035">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state x="184" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.788@0.23.1440.788" timestamp="1593344627035" />
+    <state x="184" y="80" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.792@0.23.1440.792" timestamp="1593344587044" />
+    <state width="679" height="7" key="GridCell.Tab.0.bottom" timestamp="1593344830412">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="679" height="7" key="GridCell.Tab.0.bottom/0.23.1440.788@0.23.1440.788" timestamp="1593344830412" />
+    <state width="679" height="7" key="GridCell.Tab.0.center" timestamp="1593344830410">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="679" height="7" key="GridCell.Tab.0.center/0.23.1440.788@0.23.1440.788" timestamp="1593344830410" />
+    <state width="679" height="7" key="GridCell.Tab.0.left" timestamp="1593344830410">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="679" height="7" key="GridCell.Tab.0.left/0.23.1440.788@0.23.1440.788" timestamp="1593344830410" />
+    <state width="679" height="7" key="GridCell.Tab.0.right" timestamp="1593344830411">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="679" height="7" key="GridCell.Tab.0.right/0.23.1440.788@0.23.1440.788" timestamp="1593344830411" />
+    <state width="680" height="7" key="GridCell.Tab.1.bottom" timestamp="1593344829977">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.1.bottom/0.23.1440.788@0.23.1440.788" timestamp="1593344829977" />
+    <state width="680" height="7" key="GridCell.Tab.1.center" timestamp="1593344829976">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.1.center/0.23.1440.788@0.23.1440.788" timestamp="1593344829976" />
+    <state width="680" height="7" key="GridCell.Tab.1.left" timestamp="1593344829975">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.1.left/0.23.1440.788@0.23.1440.788" timestamp="1593344829975" />
+    <state width="680" height="7" key="GridCell.Tab.1.right" timestamp="1593344829976">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.1.right/0.23.1440.788@0.23.1440.788" timestamp="1593344829976" />
+    <state width="680" height="7" key="GridCell.Tab.2.bottom" timestamp="1593344829980">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.2.bottom/0.23.1440.788@0.23.1440.788" timestamp="1593344829980" />
+    <state width="680" height="7" key="GridCell.Tab.2.center" timestamp="1593344829979">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.2.center/0.23.1440.788@0.23.1440.788" timestamp="1593344829979" />
+    <state width="680" height="7" key="GridCell.Tab.2.left" timestamp="1593344829978">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.2.left/0.23.1440.788@0.23.1440.788" timestamp="1593344829978" />
+    <state width="680" height="7" key="GridCell.Tab.2.right" timestamp="1593344829979">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state width="680" height="7" key="GridCell.Tab.2.right/0.23.1440.788@0.23.1440.788" timestamp="1593344829979" />
+    <state x="66" y="23" key="SettingsEditor" timestamp="1593321531412">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state x="66" y="23" key="SettingsEditor/0.23.1440.788@0.23.1440.788" timestamp="1593321531412" />
+    <state x="455" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1593355030854">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="455" y="250" key="com.intellij.ide.util.TipDialog/0.23.1440.788@0.23.1440.788" timestamp="1593343904185" />
+    <state x="455" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.811@0.23.1440.811" timestamp="1593355030854" />
+    <state x="182" y="108" key="spring file set editor" timestamp="1593321164139">
+      <screen x="0" y="23" width="1440" height="788" />
+    </state>
+    <state x="182" y="108" key="spring file set editor/0.23.1440.788@0.23.1440.788" timestamp="1593321164139" />
+  </component>
+</project>

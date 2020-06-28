@@ -1,0 +1,78 @@
+body{
+    background-color: rgba(248,248,248,0.73);
+}
+#loginVc{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(145,145,145,0.75);
+    width:360px;
+    height: 360px;
+    background:white;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-180px;
+    margin-top:-180px;
+    -webkit-border-radius: 8px;
+
+    -moz-border-radius: 8px;
+
+    border-radius: 8px;
+
+    -webkit-box-shadow: #666 0px 0px 10px;
+
+    -moz-box-shadow: #666 0px 0px 10px;
+    box-shadow: #666 0px 0px 10px;
+}
+#textClass{
+    font-size: 24px;
+    color: rgba(72,160,127,1);
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.line{
+    background-color: rgba(145,145,145,0.75) ;
+    width: 100%;
+    height:1px;
+    margin-top: 20px;
+}
+.form_text_ipt{
+    width: 300px;
+    height: 40px;
+    border: solid 1px #CCCCCC;
+    margin: 20px auto 0 auto;
+    background: #FFFFFF;
+}
+.form_text_ipt input{
+    width: 290px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    font-family: "寰蒋闆呴粦";
+    font-size: 15px;
+    color: #666;
+}
+.ececk_warning{
+    font-size: 13px;
+    color: red;
+    width: 300px;
+    margin: 0 auto;
+    display: none;
+}
+#login_bt{
+    margin-top: 25px;
+    width: 100%;
+    background-color: rgba(72,160,127,1);
+    height: 40px;
+}
+#login_bt{
+    width: 100%;
+    height: 45px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    background: rgba(72,160,127,1);
+    cursor: pointer;
+}
