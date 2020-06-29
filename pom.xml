@@ -13,7 +13,7 @@
 
     <!--依赖包版本管理-->
     <properties>
-        <springVersion>4.3.1.RELEASE</springVersion>
+        <springVersion>5.2.7.RELEASE</springVersion>
         <log4jversion>1.2.17</log4jversion>
         <jsonVersion>1.9.13</jsonVersion>
     </properties>
@@ -282,7 +282,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.1.4.RELEASE</version>
+            <version>5.2.7.RELEASE</version>
         </dependency>
 
 <!--        <dependency>-->
