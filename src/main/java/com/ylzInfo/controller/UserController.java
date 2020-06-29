@@ -34,6 +34,9 @@ public class UserController {
                 return  new Result(0,"邀请码错误");
             }
             userService.register(request);
+            int userid = list.get(0).getUserid();
+//            积分添加
+            userService.update(userid);
             return new Result(1,"注册成功！",null);
         }catch (Exception e){
             return  new Result(0,"服务器异常");

@@ -45,4 +45,9 @@ public class UserServiceImpl implements UserService {
         List list =  userMapper.selectByUserNameAndpwd(username,password);
         return list;
     }
+
+    @Override
+    public void update(int userid) {
+
+    }
 }

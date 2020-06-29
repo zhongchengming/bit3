@@ -12,6 +12,7 @@
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="invitationcode" property="invitationcode" jdbcType="VARCHAR" />
     <result column="balance" property="balance" jdbcType="VARCHAR" />
+    <result column="integral" property="integral" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
@@ -57,9 +58,9 @@
       This element was generated on Mon Jun 29 20:53:30 CST 2020.
     -->
     insert into w_user (id, username, password,
-      invitationcode, balance)
+      invitationcode, balance,integral)
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
-      #{invitationcode,jdbcType=VARCHAR}, #{balance,jdbcType=VARCHAR})
+      #{invitationcode,jdbcType=VARCHAR}, #{balance,jdbcType=VARCHAR},#{integral,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.ylzInfo.bean.User" >
     <!--
@@ -123,6 +124,9 @@
       <if test="balance != null" >
         balance = #{balance,jdbcType=VARCHAR},
       </if>
+      <if test="integral != null" >
+        integral = #{integral,jdbcType=INTEGER},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -136,7 +140,7 @@
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       invitationcode = #{invitationcode,jdbcType=VARCHAR},
-      balance = #{balance,jdbcType=VARCHAR}
+      balance = #{balance,jdbcType=VARCHAR},integral=#{integral,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

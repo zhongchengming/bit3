@@ -9,4 +9,6 @@ public interface UserService {
     void register(HttpServletRequest request);
 
     List<User> login(HttpServletRequest request);
+
+    void update(int userid);
 }
