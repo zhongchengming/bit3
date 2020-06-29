@@ -274,23 +274,28 @@
             <artifactId>sitemesh</artifactId>
             <version>3.0.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.typesafe.dynamicdatasource</groupId>
-            <artifactId>dynamic-data-source_2.11</artifactId>
-            <version>0.1.0</version>
-        </dependency>
-
+<!--        <dependency>-->
+<!--            <groupId>com.typesafe.dynamicdatasource</groupId>-->
+<!--            <artifactId>dynamic-data-source_2.11</artifactId>-->
+<!--            <version>0.1.0</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-beans</artifactId>
-                </exclusion>
-            </exclusions>
+            <version>4.1.4.RELEASE</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-webmvc</artifactId>-->
+<!--            <version>4.3.1</version>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework</groupId>-->
+<!--                    <artifactId>spring-beans</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
 
     </dependencies>
