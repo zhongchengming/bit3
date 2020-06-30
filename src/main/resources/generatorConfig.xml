@@ -23,7 +23,7 @@
 <!--                enableDeleteByExample="false"-->
 <!--                enableSelectByExample="false" selectByExampleQueryId="false">-->
 <!--        </table>-->
-        <table  tableName="w_invitation" domainObjectName="Invitation" enableCountByExample="false" enableUpdateByExample="false"
+        <table  tableName="grade" domainObjectName="Grade" enableCountByExample="false" enableUpdateByExample="false"
                         enableDeleteByExample="false"
                         enableSelectByExample="false" selectByExampleQueryId="false">
         </table>

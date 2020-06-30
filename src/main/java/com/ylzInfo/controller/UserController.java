@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/user")
@@ -28,16 +29,28 @@ public class UserController {
     @RequestMapping("/register")
     public Result register(HttpServletRequest request){
         try {
-            String invitationcode = request.getParameter("invitationcode");
-            List<Invitation> list = invitationServer.selectByCode(invitationcode);
-            if(list.size()!=1){
-                return  new Result(0,"邀请码错误");
+            String username = request.getParameter("username");
+            List<User> listusername = userService.selectByUsername(username);
+            if(listusername.size()!=0){
+                return  new Result(0,"用户名已注册！");
             }
-            userService.register(request);
-            int userid = list.get(0).getUserid();
-//            积分添加
-            userService.update(userid);
-            return new Result(1,"注册成功！",null);
+            //   查询用户表是否存在邀请码
+            String invitationcode = request.getParameter("invitationcode");
+            List<User> list = userService.selectByinvitatocode(invitationcode);
+            if(list.size()!=1){
+                List<Invitation> invitationList = invitationServer.selectByCode(invitationcode);
+                if(invitationList.size()!=1){
+                    return  new Result(0,"邀请码错误");
+                }else {
+                    userService.registerTwo(request);
+                    return new Result(1,"注册成功！",null);
+                }
+            }else {
+                User user = list.get(0);
+                userService.register(request,user);
+                return new Result(1,"注册成功！",null);
+            }
+
         }catch (Exception e){
             return  new Result(0,"服务器异常");
         }
@@ -54,5 +67,18 @@ public class UserController {
         }catch (Exception e){
             return  new Result(0,"服务器异常");
         }
+    }
+
+    @ResponseBody
+    @RequestMapping("/messageList")
+    public Result messageList(HttpServletRequest request){
+        List messagelist = new ArrayList();
+        messagelist.add("加载脚本...");
+        messagelist.add("连接bite平台..");
+        messagelist.add("嵌入脚本...");
+        messagelist.add("加载数据..");
+        messagelist.add("绑定数据....");
+        messagelist.add("设置成功....");
+        return new Result(1,"获取成功！",messagelist);
     }
 }

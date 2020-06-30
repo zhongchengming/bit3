@@ -55,4 +55,8 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
     List selectByUserNameAndpwd(@Param("username") String username, @Param("password") String password);
+
+    List selectByinvitatocode(@Param("invitationcode") String invitationcode);
+
+    List<User> selectByAccount(@Param("username")String username);
 }
