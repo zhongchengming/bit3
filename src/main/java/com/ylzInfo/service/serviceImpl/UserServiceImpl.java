@@ -5,7 +5,6 @@ import com.ylzInfo.bean.User;
 import com.ylzInfo.mapping.GradeMapper;
 import com.ylzInfo.mapping.UserMapper;
 import com.ylzInfo.service.UserService;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +29,7 @@ public class UserServiceImpl implements UserService {
         user.setUsername(username);
         String gradenew = null;
         if(vuser.getGrade()==null){
-             gradenew = String.valueOf(vuser.getId());
+            gradenew = String.valueOf(vuser.getId());
         }else {
             gradenew = vuser.getId()+","+vuser.getGrade();
         }
@@ -46,16 +45,16 @@ public class UserServiceImpl implements UserService {
             }else {
                 grade1 = list.get(i);
             }
-              String scoreuserid = idList[i];
-              User addscoreUser = userMapper.selectByPrimaryKey(Integer.valueOf(scoreuserid));
-              int addscore =  addscoreUser.getIntegral()==null?0:addscoreUser.getIntegral();
-              int score =  Integer.valueOf(grade1.getScore())+addscore;
-              User newuser = new User();
-              newuser.setId(Integer.valueOf(scoreuserid));
-              newuser.setIntegral(score);
-              userMapper.updateByPrimaryKeySelective(newuser);
+            String scoreuserid = idList[i];
+            User addscoreUser = userMapper.selectByPrimaryKey(Integer.valueOf(scoreuserid));
+            int addscore =  addscoreUser.getIntegral()==null?0:addscoreUser.getIntegral();
+            int score =  Integer.valueOf(grade1.getScore())+addscore;
+            User newuser = new User();
+            newuser.setId(Integer.valueOf(scoreuserid));
+            newuser.setIntegral(score);
+            userMapper.updateByPrimaryKeySelective(newuser);
         }
-       //        设计等级
+        //        设计等级
         StringBuffer  stringBuffer = new StringBuffer();
 
 //添加邀请码对应的那个用户id
@@ -104,7 +103,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> selectByUsername(String username) {
-      List<User>list =  userMapper.selectByAccount(username);
+        List<User>list =  userMapper.selectByAccount(username);
         return list;
     }
 
@@ -112,10 +111,10 @@ public class UserServiceImpl implements UserService {
         Random r = new Random(1);
         int size =String.valueOf(userid).length();
         StringBuffer  stringBuffer = new StringBuffer(userid);
-       for(int i=0 ; i<5-size ;  i++) {
-         int randnum =  (int) (Math.random() * 10);
-         stringBuffer.append(randnum);
-       }
-       return stringBuffer.toString();
+        for(int i=0 ; i<5-size ;  i++) {
+            int randnum =  (int) (Math.random() * 10);
+            stringBuffer.append(randnum);
+        }
+        return stringBuffer.toString();
     }
 }

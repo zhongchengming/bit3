@@ -5,11 +5,8 @@ import com.ylzInfo.bean.User;
 import com.ylzInfo.service.InvitationServer;
 import com.ylzInfo.service.UserService;
 import com.ylzInfo.util.Result;
-import org.apache.http.HttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,9 +17,9 @@ import java.util.List;
 @RequestMapping("/user")
 @Controller
 public class UserController {
-   @Autowired
+    @Autowired
     UserService userService;
-   @Autowired
+    @Autowired
     InvitationServer invitationServer;
 
     @ResponseBody
@@ -59,10 +56,10 @@ public class UserController {
     @RequestMapping("/login")
     public Result login(HttpServletRequest request){
         try {
-             List<User> list = userService.login(request);
-             if(list.size()!=1){
-                 return new Result(1,"账号或者密码错误！",null);
-             }
+            List<User> list = userService.login(request);
+            if(list.size()!=1){
+                return new Result(0,"账号或者密码错误！",null);
+            }
             return new Result(1,"登录成功！",list.get(0));
         }catch (Exception e){
             return  new Result(0,"服务器异常");

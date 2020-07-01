@@ -26,4 +26,13 @@ public class IndexController {
             return "index";
         }
     }
+    @RequestMapping("appVersionManage")
+    public String appVersionManage(){
+        return "viewManage/appVersionManage";
+    }
+    @RequestMapping("orderManage")
+    public String order(){
+        return "viewManage/orderManage";
+    }
+
 }
