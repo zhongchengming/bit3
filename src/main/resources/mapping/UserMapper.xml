@@ -74,9 +74,9 @@
       This element was generated on Mon Jun 29 20:53:30 CST 2020.
     -->
     insert into w_user (id, username, password,
-      invitationcode, balance,integral,grade)
+    invitationcode, balance,integral,grade)
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
-      #{invitationcode,jdbcType=VARCHAR}, #{balance,jdbcType=VARCHAR},#{integral,jdbcType=INTEGER}, #{grade,jdbcType=VARCHAR})
+    #{invitationcode,jdbcType=VARCHAR}, #{balance,jdbcType=VARCHAR},#{integral,jdbcType=INTEGER}, #{grade,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.ylzInfo.bean.User" >
     <!--
@@ -169,9 +169,9 @@
     -->
     update w_user
     set username = #{username,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      invitationcode = #{invitationcode,jdbcType=VARCHAR},
-      balance = #{balance,jdbcType=VARCHAR},integral=#{integral,jdbcType=INTEGER}, grade = #{grade,jdbcType=VARCHAR}
+    password = #{password,jdbcType=VARCHAR},
+    invitationcode = #{invitationcode,jdbcType=VARCHAR},
+    balance = #{balance,jdbcType=VARCHAR},integral=#{integral,jdbcType=INTEGER}, grade = #{grade,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
