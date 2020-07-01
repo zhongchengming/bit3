@@ -46,40 +46,44 @@
                 <div class="modal-body">
                     <div class="div_line">
                         <span style="color: red">*</span>
-                        <span style="font-size: 15px">级别</span>
-                        <select class="form-control m-b" name="gradename" id="gradename"  style="width: 120px;height: 30px;display: inline-block;margin-left: 20px">
+                        <span style="font-size: 15px">是否强制更新</span>
+                        <select class="form-control m-b" name="i_isforceupdate" id="i_isforceupdate"  style="width: 120px;height: 30px;display: inline-block;margin-left: 20px">
                             <option value="">--请选择--</option>
-
+                            <option value="001">是</option>
+                            <option value="002">否</option>
                         </select>
-                        <%--<input placeholder="" class="add_input" name="gradename" id="gradename">--%>
                         <span style="color: red;margin-left: 20px">*</span>
-                        <span style="font-size: 15px;">积分</span>
-                        <input placeholder="" class="add_input" name="score" id="score">
+                        <span style="font-size: 15px;">渠道类型</span>
+                        <select class="form-control m-b" id="i_type" name="i_type"  style="width: 120px;height: 30px;display: inline-block;margin-left: 20px" >
+                            <option value="">--请选择--</option>
+                            <option value="IOS">IOS</option>
+                            <option value="ANDROID">ANDROID</option>
+                        </select>
                     </div>
 
                     <p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 25px;"></p>
 
-                    <%--<div class="div_line">--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px">版本号</span>--%>
-                        <%--<input placeholder="例如：1.0.1" class="add_input" id="i_version" name="i_version">--%>
-                        <%--<span style="color: red;margin-left: 35px">*</span>--%>
-                        <%--<span style="font-size: 15px">版本名称</span>--%>
-                        <%--<input placeholder="" class="add_input" name="i_versionname" id="i_versionname">--%>
-                    <%--</div>--%>
+                    <div class="div_line">
+                        <span style="color: red">*</span>
+                        <span style="font-size: 15px">版本号</span>
+                        <input placeholder="例如：1.0.1" class="add_input" id="i_version" name="i_version">
+                        <span style="color: red;margin-left: 35px">*</span>
+                        <span style="font-size: 15px">版本名称</span>
+                        <input placeholder="" class="add_input" name="i_versionname" id="i_versionname">
+                    </div>
 
-                    <%--<p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 20px"></p>--%>
+                    <p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 20px"></p>
 
-                    <%--<div class="div_line">--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px;">下载地址</span>--%>
-                        <%--<input placeholder="" class="add_input" style="width: 250px" name="i_url" id="i_url">--%>
-                       <%--<br>--%>
-                        <%--<br>--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px">更新描述：</span>--%>
-                        <%--<textarea style="width: 500px;height: 100px;margin-top: 20px" name="i_description" id="i_description"></textarea>--%>
-                    <%--</div>--%>
+                    <div class="div_line">
+                        <span style="color: red">*</span>
+                        <span style="font-size: 15px;">下载地址</span>
+                        <input placeholder="" class="add_input" style="width: 250px" name="i_url" id="i_url">
+                        <br>
+                        <br>
+                        <span style="color: red">*</span>
+                        <span style="font-size: 15px">更新描述：</span>
+                        <textarea style="width: 500px;height: 100px;margin-top: 20px" name="i_description" id="i_description"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -128,13 +132,10 @@
 </style>
 <script>
     $(function () {
-        for (var i = 1;i<30;i++){
-            $("#gradename").append('<option value="'+i+'">'+i+'</option>');
-        }
         $('#myModal').modal('hide');
         var $table=$('#table').bootstrapTable({
             //height: getHeight(),
-            url: 'web/gradelist',
+            url: 'versionInfofj',
             classes:'table table-hover table-theme',
             striped:false,//设置为 true 会有隔行变色效果
             undefinedText:'****',//当数据为 undefined 时显示的字符
@@ -164,8 +165,8 @@
             classes : 'table table-hover table-condensed table-responsive table-orange',
             columns: [
                 {
-                    field: 'id',
-                    title: '序号',
+                    field: 'version',
+                    title: '版本号',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
@@ -173,8 +174,8 @@
                     width:'150px'
                 },
                 {
-                    field: 'gradename',
-                    title: '等级',
+                    field: 'versionname',
+                    title: '版本名称',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
@@ -182,15 +183,61 @@
                     width:'100px'
                 },
                 {
-                    field: 'score',
-                    title: '积分',
+                    field: 'type',
+                    title: '渠道类型',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
                     valign:'middle',
                     width:'100px'
                 },
-               {title: '操作',
+                {
+                    field: 'isforceupdate',
+                    title: '是否强制更新',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'60px',
+                },
+                {
+                    field: 'url',
+                    title: '下载地址',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'100px'
+                },
+                {
+                    field: 'description',
+                    title: '更新描述',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'120px'
+                },
+                {
+                    field: 'createtime',
+                    title: '创建时间',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'80px'
+
+                },
+                {
+                    field: 'updatetime',
+                    title: '更新时间',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'60px',},
+
+                {title: '操作',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
@@ -203,7 +250,7 @@
             responseHandler : function(res) {
                 return {
                     "total" : res.resultBody.totalCounts,//总记录数
-                    "rows" : res.resultBody//返回数据
+                    "rows" : res.resultBody.list//返回数据
                 };
             }
 
@@ -216,11 +263,15 @@
 
     window.operateEvents = {
         'click #edit': function (e, value, row, index) {
-            $("#score").val(row.score);
-            $("#gradename").val(row.gradename);
+            $("#i_isforceupdate").val(row.isforceupdate);
+            $("#i_type").val(row.type);
+            $("#i_version").val(row.version);
+            $("#i_versionname").val(row.versionname);
+            $("#i_description").val(row.description);
+            $("#i_url").val(row.url)
             $("#myModal").modal('show');
             document.getElementById("submit_bt").innerText = "提交修改"
-            document.getElementById("myModalLabel").innerText = "等级修改"
+            document.getElementById("myModalLabel").innerText = "版本修改"
             var input_i_version = $("#i_version");
             input_i_version.attr("readonly","readonly");
         },
@@ -289,34 +340,23 @@
 <script>
     function submitData(button) {
         if(button.innerText=="提交修改"||button.innerText=="提交") {
-            // var  type = $("#i_type").val();
-            // var  i_url = $("#i_url").val();
-            // var  i_versionname = $("#i_versionname").val();
-            // var i_isforceupdate = $("#i_isforceupdate").val();
-            // var i_description = $("#i_description").val();
-            // if(type.length==0||i_url.length==0||i_versionname.length==0||i_isforceupdate.length==0||i_description.length==0){
-            //     parent.layer.msg('还有未填项！');
-            //     return
-            // }
-            var score = $("#score").val();
-            if(score.length==0){
-                layer.msg("请输入积分");
+            var  type = $("#i_type").val();
+            var  i_url = $("#i_url").val();
+            var  i_versionname = $("#i_versionname").val();
+            var i_isforceupdate = $("#i_isforceupdate").val();
+            var i_description = $("#i_description").val();
+            if(type.length==0||i_url.length==0||i_versionname.length==0||i_isforceupdate.length==0||i_description.length==0){
+                parent.layer.msg('还有未填项！');
                 return
             }
-            var gradename = $("#gradename").val();
-            if(gradename.length==0){
-                layer.msg("请设置等级");
-                return
-            }
-
             var url = null;
             var message = null;
             if(button.innerText=="提交修改"){
-              url = "web/updateAgrade";
+                url = "updataVersionfj1233";
                 message = "修改成功！"
             }else {
-                url = "web/addAgrade";
-                message = "新增成功！"
+                url = "addVersionfj1233";
+                message = "新增版本成功！"
             }
             $.ajax({
                 url:url,

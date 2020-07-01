@@ -40,15 +40,15 @@
                 <li>
                     <a href="#">
                         <i class="fa fa-home"></i>
-                        <span class="nav-label">版本管理</span>
+                        <span class="nav-label">分销管理</span>
                         <span class="fa arrow"></span>
                     </a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a class="J_menuItem" href="appVersionManager" data-index="0">福建1233app版本管理</a>
+                            <a class="J_menuItem" href="appVersionManage" data-index="0">级别设置</a>
                         </li>
                         <li>
-                            <a class="J_menuItem" href="appVersionManagers">其他App版本管理</a>
+                            <a class="J_menuItem" href="orderManage">充值管理</a>
                         </li>
                     </ul>
 

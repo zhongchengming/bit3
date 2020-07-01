@@ -19,10 +19,10 @@
 <body>
 </div>
 <div id="searHead">
-    <div style="float: right;width: 550px;height: 100%;">
-        <span>渠道类型</span> <input placeholder="请输入" style="margin-left: 20px" name="i_type" id="serach_input">
-        <button onmouseover="this.style.backgroundColor='rgba(64,144,114,1)'; " onmouseout="this.style.backgroundColor='rgba(72,160,127,1)'" style="background-color: rgba(72,160,127,1); width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none" onclick="search()">搜索</button>
-        <button onmouseover="this.style.backgroundColor='orange';"  onmouseout="this.style.backgroundColor='rgba(226,137,29,1)'"  style="background-color: orange; width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none"  onclick="addVersion()">+ 新增</button>
+    <div style="width: 550px;height: 100%;">
+        <%--<span>渠道类型</span> <input placeholder="请输入" style="margin-left: 20px" name="i_type" id="serach_input">--%>
+        <%--<button onmouseover="this.style.backgroundColor='rgba(64,144,114,1)'; " onmouseout="this.style.backgroundColor='rgba(72,160,127,1)'" style="background-color: rgba(72,160,127,1); width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none" onclick="search()">搜索</button>--%>
+        <button onmouseover="this.style.backgroundColor='orange';"  onmouseout="this.style.backgroundColor='rgba(226,137,29,1)'"  style="background-color: orange; width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none"  onclick="addVersion()">+ 充值</button>
     </div>
 </div>
 <div  style="width: 100%;margin-top: 0px; height: 400px;">
@@ -40,46 +40,50 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                        新增版本
+                        充值
                     </h4>
                 </div>
                 <div class="modal-body">
+                    <%--<div class="div_line">--%>
+                        <%--<span style="color: red">*</span>--%>
+                        <%--<span style="font-size: 15px">是否强制更新</span>--%>
+                        <%--<select class="form-control m-b" name="i_isforceupdate" id="i_isforceupdate"  style="width: 120px;height: 30px;display: inline-block;margin-left: 20px">--%>
+                            <%--<option value="">--请选择--</option>--%>
+                            <%--<option value="001">是</option>--%>
+                            <%--<option value="002">否</option>--%>
+                        <%--</select>--%>
+                        <%--<span style="color: red;margin-left: 20px">*</span>--%>
+                        <%--<span style="font-size: 15px;">渠道类型</span>--%>
+                        <%--<select class="form-control m-b" id="i_type" name="i_type"  style="width: 120px;height: 30px;display: inline-block;margin-left: 20px" >--%>
+                            <%--<option value="">--请选择--</option>--%>
+                            <%--<option value="IOS">IOS</option>--%>
+                            <%--<option value="ANDROID">ANDROID</option>--%>
+                        <%--</select>--%>
+                    <%--</div>--%>
+
+                    <%--<p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 25px;"></p>--%>
+
                     <div class="div_line">
                         <span style="color: red">*</span>
-                        <span style="font-size: 15px">级别</span>
-                        <select class="form-control m-b" name="gradename" id="gradename"  style="width: 120px;height: 30px;display: inline-block;margin-left: 20px">
-                            <option value="">--请选择--</option>
-
-                        </select>
-                        <%--<input placeholder="" class="add_input" name="gradename" id="gradename">--%>
-                        <span style="color: red;margin-left: 20px">*</span>
-                        <span style="font-size: 15px;">积分</span>
-                        <input placeholder="" class="add_input" name="score" id="score">
+                        <span style="font-size: 15px">用户名</span>
+                        <input placeholder="" class="add_input" id="username" name="username">
+                        <span style="color: red;margin-left: 35px">*</span>
+                        <span style="font-size: 15px">金额</span>
+                        <input placeholder="请输入数字" class="add_input" name="money" id="money">
                     </div>
 
-                    <p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 25px;"></p>
+                    <p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 20px"></p>
 
-                    <%--<div class="div_line">--%>
+                    <div class="div_line">
                         <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px">版本号</span>--%>
-                        <%--<input placeholder="例如：1.0.1" class="add_input" id="i_version" name="i_version">--%>
-                        <%--<span style="color: red;margin-left: 35px">*</span>--%>
-                        <%--<span style="font-size: 15px">版本名称</span>--%>
-                        <%--<input placeholder="" class="add_input" name="i_versionname" id="i_versionname">--%>
-                    <%--</div>--%>
-
-                    <%--<p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 20px"></p>--%>
-
-                    <%--<div class="div_line">--%>
+                        <span style="font-size: 15px;">归属银行</span>
+                        <input placeholder="" class="add_input" style="width: 250px" name="bankcard" id="bankcard">
+                        <br>
+                        <br>
                         <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px;">下载地址</span>--%>
-                        <%--<input placeholder="" class="add_input" style="width: 250px" name="i_url" id="i_url">--%>
-                       <%--<br>--%>
-                        <%--<br>--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px">更新描述：</span>--%>
-                        <%--<textarea style="width: 500px;height: 100px;margin-top: 20px" name="i_description" id="i_description"></textarea>--%>
-                    <%--</div>--%>
+                        <span style="font-size: 15px">备注：</span>
+                        <textarea style="width: 500px;height: 100px;margin-top: 20px" name="beizhu" id="beizhu"></textarea>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -134,7 +138,7 @@
         $('#myModal').modal('hide');
         var $table=$('#table').bootstrapTable({
             //height: getHeight(),
-            url: 'web/gradelist',
+            url: 'web/orderList',
             classes:'table table-hover table-theme',
             striped:false,//设置为 true 会有隔行变色效果
             undefinedText:'****',//当数据为 undefined 时显示的字符
@@ -164,8 +168,8 @@
             classes : 'table table-hover table-condensed table-responsive table-orange',
             columns: [
                 {
-                    field: 'id',
-                    title: '序号',
+                    field: 'ordernumber',
+                    title: '订单号',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
@@ -173,8 +177,8 @@
                     width:'150px'
                 },
                 {
-                    field: 'gradename',
-                    title: '等级',
+                    field: 'username',
+                    title: '用户名',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
@@ -182,28 +186,70 @@
                     width:'100px'
                 },
                 {
-                    field: 'score',
-                    title: '积分',
+                    field: 'money',
+                    title: '充值金额',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
                     valign:'middle',
                     width:'100px'
                 },
-               {title: '操作',
+                {
+                    field: 'orderstate',
+                    title: '订单状态',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'100px',
+                    formatter: function (value, row, index) {   //传入数据
+                        if(value=='0'){
+                            return "后台已充值"
+                        }
+                        if(value=='1'){
+                            return "app已充值"
+                        }
+                        if(value=='2'){
+                            return "app充值失败"
+                        }
+                        if(value=='3'){
+                            return "充值完毕"
+                        }
+                        if(value=='4'){
+                            return "审核不通过"
+                        }
+                    }
+                },
+                {
+                    field: 'beifen',
+                    title: '备注',
+                    sortable:'true',
+                    halign:'center',//表格居中
+                    align:'center',
+                    valign:'middle',
+                    width:'100px'
+                },
+                {title: '审核',
                     sortable:'true',
                     halign:'center',//表格居中
                     align:'center',
                     valign:'middle',
                     width:'100px',
                     events:operateEvents,
-                    formatter:'<a id="deleted" style="color:red"> 删除 </a>&nbsp&nbsp<a id="edit" style="color:red"> 编辑 </a>'
+                    formatter: function (value, row, index) {
+                        if(row.orderstate=='1'){
+                           return  '<a id="deleted" style="color:red"> 不通过 </a>&nbsp&nbsp<a id="edit" style="color:orange"> 通过 </a>'
+                        }else {
+                            return ""
+                        }
+
+                    },
                 }],
 
             responseHandler : function(res) {
                 return {
                     "total" : res.resultBody.totalCounts,//总记录数
-                    "rows" : res.resultBody//返回数据
+                    "rows" : res.resultBody.data//返回数据
                 };
             }
 
@@ -216,29 +262,20 @@
 
     window.operateEvents = {
         'click #edit': function (e, value, row, index) {
-            $("#score").val(row.score);
-            $("#gradename").val(row.gradename);
-            $("#myModal").modal('show');
-            document.getElementById("submit_bt").innerText = "提交修改"
-            document.getElementById("myModalLabel").innerText = "等级修改"
-            var input_i_version = $("#i_version");
-            input_i_version.attr("readonly","readonly");
-        },
-
-        'click #deleted': function (e, value, row, index) {
-            parent.layer.confirm('您确定要删除该条版本信息？', {
-                btn: ['删除','取消'], //按钮
+            parent.layer.confirm('您确定选择通过吗', {
+                btn: ['确定','取消'], //按钮
                 shade: false //不显示遮罩
             }, function(){
                 $.ajax({
-                    url:"delectVersionfj1233",
+                    url:"web/updateOrder",
                     type:"post",//请求方式
                     dataType : "json",
-                    data:{"i_version":row.version},
+                    data:{"orderstate":"3","id":row.id},
                     success:function(data){//成功后执行方法；处理返回值
                         if(data.resultCode=="1"){
-                            parent.layer.msg('删除成功', {icon: 1});
-                            $('#table').bootstrapTable('refresh',{url:'versionInfofj'});
+                            parent.layer.msg('审核成功', {icon: 1});
+                            $('#table').bootstrapTable('destroy');
+                            $('#table').bootstrapTable('refresh',{url:'web/orderList'});
                         }else{
                             alert(data.resultMsg)
                         }
@@ -249,7 +286,36 @@
                 });
 
             }, function(){
-                // parent.layer.msg('', {shift: 6});
+
+            });
+        },
+
+        'click #deleted': function (e, value, row, index) {
+            parent.layer.confirm('您确定不通过吗？', {
+                btn: ['确定','取消'], //按钮
+                shade: false //不显示遮罩
+            }, function(){
+                $.ajax({
+                    url:"web/updateOrder",
+                    type:"post",//请求方式
+                    dataType : "json",
+                    data:{"orderstate":"4","id":row.id},
+                    success:function(data){//成功后执行方法；处理返回值
+                        if(data.resultCode=="1"){
+                            $('#table').bootstrapTable('destroy');
+                            parent.layer.msg('提交成功', {icon: 1});
+                            $('#table').bootstrapTable('refresh',{url:'web/orderList'});
+                        }else{
+                            alert(data.resultMsg)
+                        }
+                    },
+                    error:function(){//成功后执行方法
+                        alert("请求错误！")
+                    }
+                });
+
+            }, function(){
+
             });
         }
     };
@@ -289,34 +355,25 @@
 <script>
     function submitData(button) {
         if(button.innerText=="提交修改"||button.innerText=="提交") {
-            // var  type = $("#i_type").val();
-            // var  i_url = $("#i_url").val();
-            // var  i_versionname = $("#i_versionname").val();
-            // var i_isforceupdate = $("#i_isforceupdate").val();
-            // var i_description = $("#i_description").val();
-            // if(type.length==0||i_url.length==0||i_versionname.length==0||i_isforceupdate.length==0||i_description.length==0){
-            //     parent.layer.msg('还有未填项！');
-            //     return
-            // }
-            var score = $("#score").val();
-            if(score.length==0){
-                layer.msg("请输入积分");
+            var username = $("#username").val();
+            if(username.length==0){
+                layer.msg("请输入用户名");
                 return
             }
-            var gradename = $("#gradename").val();
-            if(gradename.length==0){
-                layer.msg("请设置等级");
+            var money = $("#money").val();
+            if(money.length==0){
+                layer.msg("请输入充值金额");
                 return
             }
 
             var url = null;
             var message = null;
             if(button.innerText=="提交修改"){
-              url = "web/updateAgrade";
+                url = "web/updateAgrade";
                 message = "修改成功！"
             }else {
-                url = "web/addAgrade";
-                message = "新增成功！"
+                url = "web/creatOrder";
+                message = "添加订单成功！"
             }
             $.ajax({
                 url:url,
@@ -325,12 +382,12 @@
                 data:$("#Formdata").serialize(),
                 success:function(data){//成功后执行方法；处理返回值
                     if(data.resultCode=="1"){
-                        $('#table').bootstrapTable('refresh',{url:'versionInfofj'});
+                        $('#table').bootstrapTable('refresh',{url:'web/orderList'});
                         $("#myModal").modal('hide');
                         document.getElementById("Formdata").reset();
                         parent.layer.msg(message);
                     }else{
-                        alert(data.resultMsg)
+                        parent.layer.msg(data.resultMsg)
                     }
                 },
                 error:function(){//成功后执行方法
@@ -346,7 +403,7 @@
     function addVersion() {
         document.getElementById("Formdata").reset();
         document.getElementById("submit_bt").innerText = "提交"
-        document.getElementById("myModalLabel").innerText = "新增版本"
+        document.getElementById("myModalLabel").innerText = "添加充值"
         $("#myModal").modal('show');
     }
 

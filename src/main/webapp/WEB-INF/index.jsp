@@ -14,7 +14,7 @@
     </c:if>
 </head>
 <body>
-<form onsubmit="return valid()" action="login"  method="post">
+<form onsubmit="return valid()" action="login">
     <div id="loginVc">
         <div style="width: calc(100% - 40px);height: 100%;margin-left: 20px">
             <p id="textClass">登录</p>
