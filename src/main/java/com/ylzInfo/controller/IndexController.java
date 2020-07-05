@@ -35,4 +35,14 @@ public class IndexController {
         return "viewManage/orderManage";
     }
 
+    @RequestMapping("appSetup")
+    public String appSetup(){
+        return "viewManage/appSetUp";
+    }
+
+    @RequestMapping("withdrawalManage")
+    public String withdrawalManage(){
+        return "viewManage/withdrawalManage";
+    }
+
 }

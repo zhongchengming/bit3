@@ -19,9 +19,9 @@
 <body>
 </div>
 <div id="searHead">
-    <div style="float: right;width: 550px;height: 100%;">
-        <span>渠道类型</span> <input placeholder="请输入" style="margin-left: 20px" name="i_type" id="serach_input">
-        <button onmouseover="this.style.backgroundColor='rgba(64,144,114,1)'; " onmouseout="this.style.backgroundColor='rgba(72,160,127,1)'" style="background-color: rgba(72,160,127,1); width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none" onclick="search()">搜索</button>
+    <div style="width: 550px;height: 100%;">
+        <%--<span>渠道类型</span> <input placeholder="请输入" style="margin-left: 20px" name="i_type" id="serach_input">--%>
+        <%--<button onmouseover="this.style.backgroundColor='rgba(64,144,114,1)'; " onmouseout="this.style.backgroundColor='rgba(72,160,127,1)'" style="background-color: rgba(72,160,127,1); width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none" onclick="search()">搜索</button>--%>
         <button onmouseover="this.style.backgroundColor='orange';"  onmouseout="this.style.backgroundColor='rgba(226,137,29,1)'"  style="background-color: orange; width: 100px;height: 30px;color: white;border-style: none;margin-left: 15px;border-radius: 4px;outline: none"  onclick="addVersion()">+ 新增</button>
     </div>
 </div>
@@ -40,7 +40,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                        新增版本
+                        新增积分等级
                     </h4>
                 </div>
                 <div class="modal-body">
@@ -58,28 +58,7 @@
                     </div>
 
                     <p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 25px;"></p>
-
-                    <%--<div class="div_line">--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px">版本号</span>--%>
-                        <%--<input placeholder="例如：1.0.1" class="add_input" id="i_version" name="i_version">--%>
-                        <%--<span style="color: red;margin-left: 35px">*</span>--%>
-                        <%--<span style="font-size: 15px">版本名称</span>--%>
-                        <%--<input placeholder="" class="add_input" name="i_versionname" id="i_versionname">--%>
-                    <%--</div>--%>
-
-                    <%--<p style="width: 100%;height: 1px;background-color: rgba(199,199,199,0.8);margin-top: 20px"></p>--%>
-
-                    <%--<div class="div_line">--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px;">下载地址</span>--%>
-                        <%--<input placeholder="" class="add_input" style="width: 250px" name="i_url" id="i_url">--%>
-                       <%--<br>--%>
-                        <%--<br>--%>
-                        <%--<span style="color: red">*</span>--%>
-                        <%--<span style="font-size: 15px">更新描述：</span>--%>
-                        <%--<textarea style="width: 500px;height: 100px;margin-top: 20px" name="i_description" id="i_description"></textarea>--%>
-                    <%--</div>--%>
+                    <input name="id" id="id" type="hidden">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -197,7 +176,7 @@
                     valign:'middle',
                     width:'100px',
                     events:operateEvents,
-                    formatter:'<a id="deleted" style="color:red"> 删除 </a>&nbsp&nbsp<a id="edit" style="color:red"> 编辑 </a>'
+                    formatter:'<a id="edit" style="color:red"> 编辑 </a>'
                 }],
 
             responseHandler : function(res) {
@@ -218,40 +197,14 @@
         'click #edit': function (e, value, row, index) {
             $("#score").val(row.score);
             $("#gradename").val(row.gradename);
+            $("#id").val(row.id);
+
             $("#myModal").modal('show');
             document.getElementById("submit_bt").innerText = "提交修改"
             document.getElementById("myModalLabel").innerText = "等级修改"
-            var input_i_version = $("#i_version");
-            input_i_version.attr("readonly","readonly");
+
         },
 
-        'click #deleted': function (e, value, row, index) {
-            parent.layer.confirm('您确定要删除该条版本信息？', {
-                btn: ['删除','取消'], //按钮
-                shade: false //不显示遮罩
-            }, function(){
-                $.ajax({
-                    url:"delectVersionfj1233",
-                    type:"post",//请求方式
-                    dataType : "json",
-                    data:{"i_version":row.version},
-                    success:function(data){//成功后执行方法；处理返回值
-                        if(data.resultCode=="1"){
-                            parent.layer.msg('删除成功', {icon: 1});
-                            $('#table').bootstrapTable('refresh',{url:'versionInfofj'});
-                        }else{
-                            alert(data.resultMsg)
-                        }
-                    },
-                    error:function(){//成功后执行方法
-                        alert("请求错误！")
-                    }
-                });
-
-            }, function(){
-                // parent.layer.msg('', {shift: 6});
-            });
-        }
     };
 
 
@@ -314,10 +267,12 @@
             if(button.innerText=="提交修改"){
               url = "web/updateAgrade";
                 message = "修改成功！"
+
             }else {
                 url = "web/addAgrade";
                 message = "新增成功！"
             }
+
             $.ajax({
                 url:url,
                 type:"post",//请求方式
@@ -325,12 +280,13 @@
                 data:$("#Formdata").serialize(),
                 success:function(data){//成功后执行方法；处理返回值
                     if(data.resultCode=="1"){
-                        $('#table').bootstrapTable('refresh',{url:'versionInfofj'});
+                        $('#table').bootstrapTable('refresh',{url:'web/gradelist'});
                         $("#myModal").modal('hide');
                         document.getElementById("Formdata").reset();
                         parent.layer.msg(message);
                     }else{
-                        alert(data.resultMsg)
+                        parent.layer.msg(data.resultMsg);
+
                     }
                 },
                 error:function(){//成功后执行方法
@@ -344,9 +300,10 @@
         $('#table').bootstrapTable('refresh',{url:'versionInfofj'});
     }
     function addVersion() {
+        $("#id").val("");
         document.getElementById("Formdata").reset();
         document.getElementById("submit_bt").innerText = "提交"
-        document.getElementById("myModalLabel").innerText = "新增版本"
+        document.getElementById("myModalLabel").innerText = "新增积分等级"
         $("#myModal").modal('show');
     }
 

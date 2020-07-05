@@ -5,10 +5,12 @@ import com.ylzInfo.bean.User;
 import com.ylzInfo.mapping.GradeMapper;
 import com.ylzInfo.mapping.UserMapper;
 import com.ylzInfo.service.UserService;
+import com.ylzInfo.util.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
@@ -105,6 +107,27 @@ public class UserServiceImpl implements UserService {
     public List<User> selectByUsername(String username) {
         List<User>list =  userMapper.selectByAccount(username);
         return list;
+    }
+
+    @Override
+    public Result changePwd(HttpServletRequest request) {
+        String oldPassword = request.getParameter("oldPassword");
+        String newPassword = request.getParameter("newPassword");
+        String userid = request.getParameter("userid");
+        User user =  userMapper.selectByPrimaryKey(Integer.valueOf(userid));
+        if(user==null){
+            return  new Result(0,"用户不存在");
+        }
+        //旧密码错误
+        if(!user.getPassword().equals(oldPassword)){
+            return  new Result(0,"旧密码错误");
+        }
+        HashMap map = new HashMap();
+        map.put("oldPassword",oldPassword);
+        map.put("newPassword",newPassword);
+        map.put("userid",userid);
+        userMapper.changePwd(map);
+        return  new Result(1,"修改成功");
     }
 
     public String invitationcode(String userid){

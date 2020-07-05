@@ -50,6 +50,12 @@
                         <li>
                             <a class="J_menuItem" href="orderManage">充值管理</a>
                         </li>
+                        <li>
+                            <a class="J_menuItem" href="withdrawalManage">提现管理</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="appSetup">app设置</a>
+                        </li>
                     </ul>
 
                 </li>

@@ -255,7 +255,7 @@
 
         });
         function queryParams(params){
-            params.i_type = $("#serach_input").val()
+            params.urlType = "0"
             return params;
         }
     })

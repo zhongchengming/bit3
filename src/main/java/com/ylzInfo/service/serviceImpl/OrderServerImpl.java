@@ -1,5 +1,4 @@
 package com.ylzInfo.service.serviceImpl;
-
 import com.ylzInfo.bean.Order;
 import com.ylzInfo.bean.User;
 import com.ylzInfo.mapping.OrderMapper;
@@ -8,7 +7,6 @@ import com.ylzInfo.service.OrderServer;
 import com.ylzInfo.util.CommUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
@@ -91,6 +89,7 @@ public class OrderServerImpl implements OrderServer {
     @Override
     public void updateOrderApp(HttpServletRequest request) throws Exception {
         String userid = request.getParameter("userid");
+        String wbankid = request.getParameter("w_bankid");
         List<Order>list = orderMapper.selectByUserId(Integer.valueOf(userid));
         Boolean bool = false;
         if(list.size()>0){
@@ -99,6 +98,7 @@ public class OrderServerImpl implements OrderServer {
                 String statue = order.getOrderstate();
                 if(statue.equals("0")){
                     order.setOrderstate("1");
+                    order.setWbankid(wbankid);
                     orderMapper.updateByPrimaryKeySelective(order);
                     bool = true;
                 }

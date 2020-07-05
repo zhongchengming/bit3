@@ -3,6 +3,7 @@ package com.ylzInfo.mapping;
 import com.ylzInfo.bean.User;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface UserMapper {
@@ -59,4 +60,6 @@ public interface UserMapper {
     List selectByinvitatocode(@Param("invitationcode") String invitationcode);
 
     List<User> selectByAccount(@Param("username")String username);
+
+    void changePwd(HashMap map);
 }

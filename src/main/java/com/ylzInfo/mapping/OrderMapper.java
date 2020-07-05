@@ -61,4 +61,7 @@ public interface OrderMapper {
     int selectCount();
 
     List<Order> selectByUserId(Integer userid);
+
+
+    List selectBankAndByUserId(Integer id);
 }

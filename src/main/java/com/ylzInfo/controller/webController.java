@@ -2,6 +2,8 @@ package com.ylzInfo.controller;
 
 import com.ylzInfo.bean.Grade;
 import com.ylzInfo.bean.Order;
+import com.ylzInfo.bean.Token;
+import com.ylzInfo.mapping.TokenMapper;
 import com.ylzInfo.service.GradeServer;
 import com.ylzInfo.service.OrderServer;
 import com.ylzInfo.util.Result;
@@ -27,7 +29,13 @@ public class webController {
     GradeServer gradeServer;
     @Autowired
     OrderServer orderServer;
+    @Autowired
+    TokenMapper tokenMapper;
 
+    /**
+     * 获取等级
+     * @return
+     */
     @ResponseBody
     @RequestMapping("gradelist")
     public Result gradelist (){
@@ -40,6 +48,11 @@ public class webController {
 
     }
 
+    /**
+     * 添加积分等级
+     * @param request
+     * @return
+     */
     @ResponseBody
     @RequestMapping("addAgrade")
     public Result addAgrade (HttpServletRequest request){
@@ -51,6 +64,12 @@ public class webController {
         }
 
     }
+
+    /**
+     * 更新
+     * @param request
+     * @return
+     */
     @ResponseBody
     @RequestMapping("updateAgrade")
     public Result updateAgrade (HttpServletRequest request){
@@ -75,12 +94,16 @@ public class webController {
         }
     }
     /**
-     * 获取列表
+     * 获取订单列表列表
      */
     @ResponseBody
     @RequestMapping("orderList")
     public Result orderList (HttpServletRequest request){
         try {
+            Result result = isunableToken(request);
+            if(result!=null){
+                return result;
+            }
            List <Order > list = orderServer.orderList(request);
            int count  = orderServer.selectCount();
             HashMap resultMap = new HashMap();
@@ -111,6 +134,10 @@ public class webController {
     @ResponseBody
     @RequestMapping("updateOrderApp")
     public Result updateOrderApp (HttpServletRequest request){
+        String wbankid = request.getParameter("w_bankid");
+        if(wbankid==null){
+            return new Result(0,"所选套餐id不能为空");
+        }
         try {
             orderServer.updateOrderApp(request);
             return new Result(1,"已提交充值申请，等待确认");
@@ -131,6 +158,35 @@ public class webController {
         }catch (Exception e){
             return new Result(0,e.getMessage());
         }
+    }
+
+    private Result isunableToken(HttpServletRequest request){
+        //表示前端请求
+        String urlType = request.getParameter("urlType");
+        if(urlType!=null){
+            return  null;
+        }
+        HashMap map = new HashMap();
+        String token = request.getParameter("token");
+        if(token==null){
+            return new Result(0,"token不能为空");
+        }
+        List<Token> tokenList =  tokenMapper.getTokenByUserid(map);
+        if(tokenList.size()==0){
+            return new Result(0,"token不存在，请重新登录");
+        }
+        if(tokenList.size()>0){
+            Token token1 = tokenList.get(0);
+            Long oldToken = Long.valueOf(token1.getCreatetime());
+            Long sjc = System.currentTimeMillis();
+            Long servenMillis = Long.valueOf(86400*7);
+            if(sjc-oldToken>servenMillis){
+                return new Result(0,"token失效，请重新登录！");
+            }
+            return new Result(0,"token不存在！");
+        }
+        return null;
+
     }
 
 }
